@@ -18,9 +18,9 @@ int main(void)
 		{
 			while (digit2 <= 57)
 			{
+				putchar(digit3);
 				putchar(digit1);
 				putchar(digit2);
-				putchar(digit3);
 				if (digit1 != 56 || digit2 != 57 || digit3 != 55)
 				{
 					putchar(',');
