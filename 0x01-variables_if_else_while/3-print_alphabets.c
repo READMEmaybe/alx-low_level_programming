@@ -8,15 +8,15 @@ int main(void)
 	int ALPHABET = 'A';
 	int alphabet = 'a';
 
-	while (ALPHABET <= 'Z')
-	{
-		putchar(ALPHABET);
-		ALPHABET++;
-	}
 	while (alphabet <= 'z')
 	{
 		putchar(alphabet);
 		alphabet++;
+	}
+	while (ALPHABET <= 'Z')
+	{
+		putchar(ALPHABET);
+		ALPHABET++;
 	}
 	putchar('\n');
 	return (0);
