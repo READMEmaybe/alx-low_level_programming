@@ -8,10 +8,10 @@ void print_times_table(int n)
 	int i = 0;
 	int j, k;
 
-	while (i < n)
+	while (i < n + 1)
 	{
 		j = 0;
-		while (j < n)
+		while (j < n + 1)
 		{
 			k = i * j;
 			if (j == 0)
