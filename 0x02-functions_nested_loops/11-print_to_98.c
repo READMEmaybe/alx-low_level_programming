@@ -6,8 +6,11 @@
  */
 void print_to_98(int n)
 {
-	for (int i = n; i <= 98; i++)
+	int i = n;
+
+	while (i <= 98)
 	{
 		printf("%i, ", i);
+		i++;
 	}
 }
