@@ -14,7 +14,9 @@ printf("%li, %li, ", a, b);
 	for (i = 2; i < 50; i++)
 	{
 		c = a + b;
-		printf("%li, ", c);
+		printf("%li", c);
+		if (i != 49)
+			printf(", ");
 		a = b;
 		b = c;
 	}
