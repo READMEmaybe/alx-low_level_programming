@@ -23,7 +23,7 @@ char *cap_string(char *s)
 			{
 				for (j = 0; j <= 12; j++)
 				{
-					if (a[j] == s[i - 1])
+					if (s[i - 1] == seperator[j])
 						s[i] -= 32;
 				}
 			}
