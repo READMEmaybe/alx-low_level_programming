@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * leet - function that encodes a string into 1337
+ * rot13 - function that encodes a string usint rot13
  * @s: the string
  * Return: the modified string
  */
 
-char *leet(char *s)
+char *rot13(char *s)
 {
 	int i, j;
 	char letters[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
