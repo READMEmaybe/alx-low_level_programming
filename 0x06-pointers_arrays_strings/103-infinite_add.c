@@ -13,8 +13,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i = 0, j = 0, k = 0, m = 0, n = 0;
 
-	while (n1[i]) i++;
-	while (n2[j]) j++;
+	while (n1[i])
+		i++;
+	while (n2[j])
+		j++;
 
 	if (i > size_r - 1 || j > size_r - 1)
 		return (0);
