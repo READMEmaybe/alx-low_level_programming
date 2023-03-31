@@ -4,3 +4,4 @@
 # 3-strcmp.c
 # 4-rev_array.c
 # 5-string_toupper.c
+# 6-cap_string.c
