@@ -15,11 +15,11 @@ void print_buffer(char *b, int size)
 		return;
 	}
 
-	int i, j;
+	unsigned long i, j;
 
 	for (i = 0; i < size; i += 10)
 	{
-		printf("%08x ", i);
+		printf("%08lx ", i);
 
 		for (j = 0; j < 10 && i + j < size; j++)
 		{
