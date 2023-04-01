@@ -17,11 +17,11 @@ void print_buffer(char *b, int size)
 
 	unsigned long i, j;
 
-	for (i = 0; i < size; i += 10)
+	for (i = 0; i < (unsigned long)size; i += 10)
 	{
 		printf("%08lx ", i);
 
-		for (j = 0; j < 10 && i + j < size; j++)
+		for (j = 0; j < 10 && i + j < (unsigned long)size; j++)
 		{
 			printf("%02x ", (unsigned char)b[i + j]);
 		}
@@ -30,7 +30,7 @@ void print_buffer(char *b, int size)
 			printf("   ");
 		}
 		printf(" ");
-		for (j = 0; j < 10 && i + j < size; j++)
+		for (j = 0; j < 10 && i + j < (unsigned long)size; j++)
 		{
 			if (isprint(b[i + j]))
 			{
