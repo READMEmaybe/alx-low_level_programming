@@ -8,7 +8,7 @@
  * Return: 0 success
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int cents;
 	int quarters, dimes, nickles, two_cents, pennies;
