@@ -34,12 +34,12 @@ int word_counter(char *s)
 char **strtow(char *str)
 {
 	char **word_array;
-	int i, j = 0, words;
+	int i, j = 0, len = 0, words;
 
-	if (str == NULL || str == "")
-		return (NULL);
 	while (str[len])
 		len++;
+	if (len == 0)
+		return (NULL);
 	words = word_counter(str);
 	if (words == 0)
 		return (NULL);
