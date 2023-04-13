@@ -64,22 +64,12 @@ char **strtow(char *str)
 				free(word_array);
 				return (NULL);
 			}
-
-			i = 0;
-			while (*str != ' ' && *str != '\0')
-			{
+			for (i = 0; *str != ' ' && *str != '\0'; i++, str++)
 				word_array[j][i] = *str;
-				str++;
-				i++;
-			}
 			word_array[j][i] = '\0';
 			j++;
 		}
 	}
-
 	word_array[j] = NULL;
-
 	return (word_array);
 }
-
-			
