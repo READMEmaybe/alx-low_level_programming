@@ -32,7 +32,7 @@ void error(void)
 	char error[] = "Error\n";
 
 	for (i = 0; error[i]; i++)
-		putchar(error[i]);
+		_putchar(error[i]);
 	exit(98);
 }
 
