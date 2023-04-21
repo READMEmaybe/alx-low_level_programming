@@ -49,12 +49,6 @@ void print_string(va_list args)
 	printf("%s", s ? s : "(nil)");
 }
 
-typedef struct printer
-{
-	char *type;
-	void (*print)(va_list args);
-} printer_t;
-
 /**
  * print_all - function that prints anything
  * @format: a list of types of arguments passed to the function
