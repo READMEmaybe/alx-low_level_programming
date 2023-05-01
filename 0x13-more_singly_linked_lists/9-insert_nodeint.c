@@ -4,6 +4,7 @@
 /**
  * insert_nodeint_at_index - function that inserts a new node
  *	at a given position.
+ * @head: pointer to the pointer to the head of the linked list.
  * @idx: the index to insert to.
  * @n: the int to insert.
  *
@@ -27,7 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (node);
 	}
 	temp = *head;
-	for (i = 0;i < idx - 1; i++)
+	for (i = 0; i < idx - 1; i++)
 	{
 		if (!temp)
 			return (NULL);
@@ -35,7 +36,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	node->next = temp->next;
 	temp->next = node;
-	
 
 	return (node);
 }
