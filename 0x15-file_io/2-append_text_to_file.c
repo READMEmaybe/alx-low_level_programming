@@ -2,7 +2,7 @@
 
 /**
  * append_text_to_file - function that appends text at the
- * 	end of a file.
+ *	end of a file.
  * @filename: the name of the file.
  * @text_content: is the NULL terminated string to add.
  *
