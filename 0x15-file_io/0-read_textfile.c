@@ -1,16 +1,17 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * read_textfile - a function ...
- * @filename: the list
- * @letters: the number
+ * read_textfile - function that reads a text file and prints it to the POSIX stdout
+ * @filename: the file
+ * @letters: the number of letters it should read and print
  *
- * Return: 1 or 0
+ * Return: actual number of letters it could read and print
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
-	int fp, rp;
+	int fp;
 	ssize_t n;
 
 	if (!filename)
@@ -34,5 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	n = write(STDOUT_FILENO, buffer, n);
 	if (n == -1)
 		n = 0;
+	free(buffer);
+	close(fp);
 	return (n);
 }
