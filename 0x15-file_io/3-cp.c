@@ -20,7 +20,7 @@ void close_f(int file)
 
 int main(int argc, char *argv[])
 {
-	int fp_from, fp_to, r, w, c;
+	int fp_from, fp_to, r, w;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
