@@ -4,7 +4,10 @@
 
 #define BUFFER_SIZE 1024
 
-
+/**
+ * close_f - function that closes @file.
+ * @file: the file to close.
+*/
 void close_f(int file)
 {
 	int c;
@@ -17,7 +20,11 @@ void close_f(int file)
 		exit(100);
 	}
 }
-
+/**
+ * check_98 - function that handles the read error.
+ * @r: value to check.
+ * @file: the file.
+*/
 void check_98(int r, char *file)
 {
 	if (r == -1)
@@ -26,7 +33,13 @@ void check_98(int r, char *file)
 		exit(98);
 	}
 }
-
+/**
+ * main - program that copies the content of a file to another file.
+ * @argc: arg count.
+ * @argv: arg vector.
+ *
+ * Return: 0 on success.
+*/
 int main(int argc, char *argv[])
 {
 	int fp_from, fp_to, r, w;
