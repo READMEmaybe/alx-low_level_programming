@@ -5,6 +5,18 @@
 #define BUFFER_SIZE 1024
 
 
+void close_f(int file)
+{
+	int c;
+
+	c = close(file);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		exit(100);
+	}
+}
 
 int main(int argc, char *argv[])
 {
@@ -29,8 +41,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	
-	
 	while (r > 0)
 	{
 		if (r == -1)
@@ -47,17 +57,7 @@ int main(int argc, char *argv[])
 		r = read(fp_from, buffer, BUFFER_SIZE);
 		fp_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
-	c = close(fp_from);
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp_from);
-		exit(100);
-	}
-	c = close(fp_to);
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp_to);
-		exit(100);
-	}
+	close_file(fp_from);
+	close_file(fp_to);
 	return (0);
 }
