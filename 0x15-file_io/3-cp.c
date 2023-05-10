@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 		r = read(fp_from, buffer, BUFFER_SIZE);
 		fp_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
-	close_file(fp_from);
-	close_file(fp_to);
+	close_f(fp_from);
+	close_f(fp_to);
 	return (0);
 }
