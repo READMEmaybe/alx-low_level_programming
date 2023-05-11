@@ -34,6 +34,19 @@ void check_98(int r, char *file)
 	}
 }
 /**
+ * check_99 - function that handles the write error.
+ * @w: value to check.
+ * @file: the file.
+*/
+void check_99(int w, char *file)
+{
+	if (w == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		exit(99);
+	}
+}
+/**
  * main - program that copies the content of a file to another file.
  * @argc: arg count.
  * @argv: arg vector.
@@ -55,20 +68,12 @@ int main(int argc, char *argv[])
 	r = read(fp_from, buffer, BUFFER_SIZE);
 	check_98(r, argv[1]);
 	fp_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fp_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+	check_99(fp_to, argv[2]);
 	while (r > 0)
 	{
 		check_98(r, argv[1]);
 		w = write(fp_to, buffer, r);
-		if (w == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		check_99(w, argv[2]);
 		r = read(fp_from, buffer, BUFFER_SIZE);
 		fp_to = open(argv[2], O_WRONLY | O_APPEND);
 	}
