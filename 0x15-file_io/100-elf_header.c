@@ -29,7 +29,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf("  Magic    ");
+	printf("  Magic:   ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -180,7 +180,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("NONE (Unknown type)\n");
+			printf("NONE (None)\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
