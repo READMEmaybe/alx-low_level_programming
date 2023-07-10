@@ -29,7 +29,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf("  Magic:   ");
+	printf("  Magic    ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -261,6 +261,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (header == NULL)
 	{
 		close_file(o);
+		free(header);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
