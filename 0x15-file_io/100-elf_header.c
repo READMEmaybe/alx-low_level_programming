@@ -186,7 +186,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 			printf("REL (Relocatable file)\n");
 			break;
 		case ET_EXEC:
-			printf("EXEC (Exexutable file)\n");
+			printf("EXEC (Executable file)\n");
 			break;
 		case ET_DYN:
 			printf("DYN (Shared object file)\n");
